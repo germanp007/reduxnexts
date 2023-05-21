@@ -1,25 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const conteoSlice = createSlice({
+export const miSlice = createSlice({
   name: "conteo",
   initialState: {
     value: 0,
   },
   reducers: {
-    incrementar: (state) => {
+    agregar: (state) => {
       state.value += 1;
     },
-    decrementar: (state) => {
+    quitar: (state) => {
       state.value -= 1;
     },
-    personalizado: (state, action) => {
+    input: (state, action) => {
       state.value += action.payload;
     },
-    restaPersonalizado: (state, action) => {
+    substract: (state, action) => {
       state.value -= action.payload;
+    },
+    restart: (state) => {
+      state.value = 0;
     },
   },
 });
 
-export const { incrementar, decrementar, personalizado, restaPersonalizado } =
-  conteoSlice.actions;
+export const { agregar, quitar, input, substract, restart } = miSlice.actions;
