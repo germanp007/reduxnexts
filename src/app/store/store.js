@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { miSlice } from "./slice";
+import { miSlice, filterSlice } from "./slice";
 export const store = configureStore({
   reducer: {
     conteo: miSlice.reducer,
+    filtered: filterSlice.reducer,
   },
 });
 
