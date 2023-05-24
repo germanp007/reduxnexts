@@ -7,6 +7,7 @@ export const miSlice = createSlice({
   },
   reducers: {
     agregar: (state) => {
+      console.log(state.value);
       state.value += 1;
     },
     quitar: (state) => {
@@ -27,6 +28,10 @@ export const miSlice = createSlice({
 export const filterSlice = createSlice({
   name: "filtered",
   initialState: {
+    range: {
+      min: 0,
+      max: 1000,
+    },
     data: [
       {
         id: 1,
@@ -88,11 +93,7 @@ export const filterSlice = createSlice({
   },
   reducers: {
     filterProduct: (state, action) => {
-      const filteredProducts = state.data.filter(
-        (e) => e.price >= action.payload
-      );
-
-      return filteredProducts;
+      state.range = action.payload;
     },
   },
 });
