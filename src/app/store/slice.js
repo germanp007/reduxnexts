@@ -7,7 +7,6 @@ export const miSlice = createSlice({
   },
   reducers: {
     agregar: (state) => {
-      console.log(state.value);
       state.value += 1;
     },
     quitar: (state) => {
