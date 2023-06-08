@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { miSlice, filterSlice } from "./slice";
+import { miSlice, filterSlice, changeSlide } from "./slice";
 export const store = configureStore({
   reducer: {
     conteo: miSlice.reducer,
     filtered: filterSlice.reducer,
+    changeBackground: changeSlide.reducer,
   },
 });
 

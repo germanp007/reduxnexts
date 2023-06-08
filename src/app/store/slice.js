@@ -97,5 +97,18 @@ export const filterSlice = createSlice({
   },
 });
 
+export const changeSlide = createSlice({
+  name: "changeBackground",
+  initialState: {
+    value: ["red", "purple", "lightblue", "pink", "gold"],
+  },
+  // reducers: {
+  //   changeBack: (state) => {
+  //     state.value[(i += 1)];
+  //   },
+  // },
+});
+
 export const { agregar, quitar, input, substract, restart } = miSlice.actions;
 export const { filterProduct } = filterSlice.actions;
+export const { changeBack } = changeSlide.actions;
